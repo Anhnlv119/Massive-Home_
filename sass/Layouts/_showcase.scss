@@ -1,0 +1,157 @@
+.showcase {
+    .showcase__top {
+        h2 {
+            @include styleText($color-black-0, $fs-3, $fs-1);
+        }
+
+        .showcase__text {
+            @include styleText($color-gray-0, $fs-4, $fs-1);
+            width: 62%;
+            margin: 0 auto;
+            line-height: $line-height-1;
+        }
+        margin-bottom: $mg-3 - 10;
+    }
+
+    .showcase__bot {
+        .tab-content{margin: $mg-3 - 30 0;}
+        .nav-item {
+            .nav-link {
+                margin: 0 $mg-1 - 10;
+                letter-spacing: 3px;
+                color: #a9a8a8;
+                font-size: $fs-0 + 1;
+                padding: 0;
+                &:hover{
+                    color:$color-black-2;
+                }
+            }
+            .active{
+                color:$color-black-2;
+            }
+        }
+
+        .showcase__item {
+            .row {
+                width: 101%;
+            }
+            .showcase__img {
+                position: relative;
+                .carousel-indicators {
+                    position: absolute;
+                    right: -295px;
+                    bottom: -7px;
+                    li {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                    }
+                }
+                img {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .showcase__main {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                margin: 0;
+                border: 20px solid $color-black-3;
+                background-color: $color-white-2;
+                margin: 0;
+                width: 100%;
+                opacity: 0;
+                transition: all 0.3s;
+                i {
+                    font-size: $fs-5 + 5;
+                    transform: translateY(45%);
+                    position: absolute;
+                    top: 20%;
+                    left: 45%;
+                }
+                .showcase__content {
+                    position: absolute;
+                    top: 60%;
+                    left: 30%;
+                }
+                h4 {
+                    margin-bottom: $mg-2;
+                    letter-spacing: 4px;
+                    font-size: $fs-0 + 1;
+                }
+                p {
+                    @include styleText($color-gray-4, $fs-0 - 1, $fw-0);
+                    margin-bottom: 0;
+                    letter-spacing: 3px;
+                    transform: translateY(-55%);
+                }
+            }
+            .showcase__hover {
+                padding: 0;
+                &:hover {
+                    .showcase__main {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive("extra-large"){
+        .showcase__bot{
+            .showcase__item{
+                .showcase__main{
+                    .showcase__content{
+                        left: 19%;
+                        h4{
+                            font-size: 12px;
+                        }
+                        p{
+                            font-size: 9px;
+                        }
+                    }
+                }
+                .showcase__img{
+                    .carousel-indicators{
+                        right: -174px;
+                    }
+                }
+            }
+        }   
+    }
+
+    @include responsive("medium"){
+        .showcase__bot{
+            .showcase__item{
+                .showcase__main{
+                    .showcase__content{
+                        left: 30%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive("very-small"){
+        padding-bottom: 0;
+        .showcase__bot{
+            .nav-item{
+                .nav-link{
+                    margin: 5px 20px;
+                }
+            }
+            .showcase__item{
+                .showcase__img{
+                    .carousel-indicators{
+                        right: -140px;
+                    }
+                }
+            }
+        }
+    }
+}

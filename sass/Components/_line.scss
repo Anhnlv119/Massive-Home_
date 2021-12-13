@@ -1,0 +1,15 @@
+.afline{
+    margin-bottom: $mg-2;
+    position: relative;
+    padding: $pd-4;
+    & ::after {
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        width: 60px;
+        height: 2px;
+        margin-left: -31px;
+        content: "";
+        background: $color-gray-1;
+    }
+}

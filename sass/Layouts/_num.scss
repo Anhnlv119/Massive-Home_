@@ -1,0 +1,40 @@
+.number{
+    background: #1b1b1b;
+    color: $color-white-0;
+    .number__item{
+        padding: 0 $pd-3;
+        .number__main{
+            margin-bottom: $mg-0 + 5;               
+            i{
+                padding-right: $pd-4;
+                font-size: $fs-5 + 6;   
+            }
+            .num{
+                line-height: $line-height-0;
+                font-size: $fs-5 + 6;  
+            }
+        }
+        .number__text{
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: $fs-4;          
+            p{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @include responsive("very-small"){
+        .number__item{
+            padding-bottom: $pd-4;
+            .number__text{
+                p{
+                    font-size: $fs-4 + 3;
+                }
+                 
+            }
+        }
+        
+    }
+    
+}

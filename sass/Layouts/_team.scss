@@ -1,0 +1,219 @@
+.team {
+    .team__top {
+        h2 {
+            @include styleText($color-black-0, $fs-3, $fs-3);
+            line-height: $line-height-0;
+            letter-spacing: 2px;
+        }
+
+        .team__text {
+            @include styleText($color-gray-0, $fs-4, $fw-3);
+            width: 62%;
+            margin: 0 auto;
+            line-height: $line-height-1;
+        }
+        margin-bottom: $mg-3 - 10;
+    }
+
+    .team__bot {
+        .team__main {
+            padding: 0 30px;
+        }
+
+        .team__img {
+            position: relative;
+            .img__text {
+                position: absolute;
+                right: 0;
+                bottom: 30px;
+                width: 70%;
+                padding: $pd-4 $pd-4 + 10;
+                text-align: right;
+                background: $color-black-4;
+                h5 {
+                    @include styleText($color-white-0, $fs-0 + 1, $fw-0);
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+                span {
+                    @include styleText($color-white-3, $fs-0 - 1, $fw-0);
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .team__hover {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 29px;
+            margin: 0;
+            opacity: 0;
+            border: 20px solid rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: all 0.3s 0.2s;
+            width: 84.5%;
+            .hover__text {
+                position: absolute;
+                top: 14%;
+                transform: translateY(-160%);
+                transition: all 0.3s 0.2s;
+                h4 {
+                    margin-bottom: $mg-1;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    font-size: 14px;
+                }
+                p {
+                    margin-bottom: 0;
+                    color: #7e7e7e;
+                    font-size: $fs-4 - 1;
+                    font-weight: normal;
+                    line-height: 30px;
+                }
+            }
+            .hover__media {
+                position: absolute;
+                bottom: 5%;
+                width: 100%;
+                transition: all 0.3s 0.2s;
+                transform: translateY(200%);
+                text-align: center;
+                opacity: 1;
+                font-size: $fs-5 + 5;
+
+                i {
+                    color: $color-black-2;
+                    font-size: $fs-4 + 1;
+                    margin: 0 $mg-2 - 4;
+                }
+            }
+        }
+
+        .team__main {
+            &:hover {
+                .team__hover {
+                    opacity: 1;
+                }
+                .hover__text {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                .hover__media {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .promo-box {
+            background: $color-white-4;
+            margin-top: $mg-3 + 20;
+            padding: $pd-3 + 10;
+            position: relative;
+            .promo-info {
+                padding-right: $pd-4 * 20;
+                h4 {
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    font-size: $fs-1 - 1;
+                    span {
+                        color: $color-gold-0;
+                    }
+                }
+                span {
+                    margin-top: $mg-0 + 5;
+                    color: #7e7e7e;
+                }
+            }
+            .promo-btn {
+                position: absolute;
+                top: 50%;
+                right: 40px;
+                margin-top: -$mg-4 - 2;
+                a {
+                    padding: $pd-1 $pd-3;
+                    margin-right: 0;
+                    color: $color-white-0;
+                    background: $color-black-2;
+                    letter-spacing: 1px;
+                    font-size: $fs-0 + 1;
+                    transition: all 0.3s;
+                }
+                &:hover {
+                    a {
+                        background: $color-gold-0;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive("large") {
+        .team__bot{
+            .team__main {
+                padding: 10px 30px;
+                margin: 0 auto;
+             }
+            .team__img{
+                .img__text{
+                    width: 64%;
+                    right: 60px;
+                }
+            }
+            .team__hover{
+                width: 75.5%;
+                top: 10px;
+                bottom: 10px;
+            }
+        }
+    }
+
+    @media screen and (max-width:767.9px) {
+        .team__bot{
+            .team__img{
+                .img__text{                   
+                    right: 2px;
+                }
+            }
+            .team__hover{
+                width: 83.5%;
+            }
+        }
+    }
+
+    @include responsive("very-small"){
+        .team__bot{
+            .team__img{
+                .img__text{
+                    width: 87%;
+                    bottom: 0;
+                }
+            }
+            .team__hover{
+                .hover__text{
+                    top: 0;
+                    h4{
+                        margin-bottom: 15px;
+                    }
+                }
+                .hover__media{
+                    bottom: 0;
+                }
+            }
+
+            .promo-box{
+                padding-bottom: 85px;
+                .promo-info{
+                    padding: 0;
+                }
+                .promo-btn{
+                    top: 85%;
+                    right: 48%;
+                }
+            }
+        }
+    }
+}

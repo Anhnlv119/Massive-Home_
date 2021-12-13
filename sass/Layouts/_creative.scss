@@ -1,0 +1,76 @@
+.creative {
+    .creative__top {
+        margin-bottom: $mg-3;
+        h2 {
+            @include styleText($color-black-0, $fs-3, $fs-1);
+        }
+
+        .creative__title1 {
+            @include styleText($color-gray-0, $fs-4, $fs-1);
+            width: 60%;
+            margin: 0 auto;
+            line-height: $line-height-1;
+        }
+
+        // .creative__title {
+        //     // margin-bottom: $mg-2;
+        //     // position: relative;
+        //     // padding: $pd-4;
+        //     // & ::after {
+        //     //     position: absolute;
+        //     //     bottom: -2px;
+        //     //     left: 50%;
+        //     //     width: 60px;
+        //     //     height: 2px;
+        //     //     margin-left: -31px;
+        //     //     content: "";
+        //     //     background: $color-gray-1;
+        //     // }
+        // }
+    }
+    
+    .creative__bot {
+        .creative__item{
+            padding: $pd-3;
+            .creative__card {
+                position: relative;
+                border: 2px solid $color-white-1 ;
+                    border-radius: 4px;
+                    padding: $pd-3;
+                .icon {
+                    position: absolute;
+                    top: -30px;
+                    left: 30px;
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    border-radius: 4px;
+                    background: $color-black-0;
+                    box-shadow: 0 0 0 10px $color-white-0;
+                    line-height: $line-height-2;
+                    transition: all 0.3s;
+                    i {
+                        color: $color-white-0;
+                        font-size: $fs-5;
+                        line-height: $line-height-2;
+                    }
+                }
+                .creative__head{
+                    margin-top: $mg-4;
+                    margin-bottom: $mg-2;
+                    @include styleText($color-black-0, $fs-4 + 3, $fw-0);
+                    letter-spacing: 1px;
+                }
+                .creative__body{
+                    @include styleText($color-gray-0, $fs-4, $fw-0);
+                }
+                &:hover{
+                    .icon{
+                        background-color: $color-gold-0;
+                    }
+                }
+            }
+               
+        }
+    }
+}

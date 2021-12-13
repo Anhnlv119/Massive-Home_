@@ -1,0 +1,7 @@
+<i class="fas fa-pencil-ruler"></i>
+<img src="https://img.icons8.com/ios-filled/50/000000/smartphone-tablet.png"/>
+<img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/64/000000/external-glass-bar-kiranshastry-solid-kiranshastry.png"/>
+
+<i class="fas fa-layer-group"></i>
+<i class="material-icons">desktop_mac</i>
+<i class="fa fa-database"></i>

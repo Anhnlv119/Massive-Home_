@@ -1,0 +1,107 @@
+.tab {
+    background-image: url(../img/bg3.png);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    .tab__main {
+        .nav {
+            a {
+                display: inline-block;
+                margin: 0 10px;
+                padding: 35px 70px;
+                color: #222;
+                background: $color-black-5;
+                transition: all 0.5s;
+                position: relative;
+                &:hover {
+                    background-color: $color-white-0;
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+                i {
+                    font-size: 36px;
+                }
+                &::after {
+                    position: absolute;
+                    bottom: -10px;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    margin-left: -10px;
+                    content: "";
+                    transition: all 0.3s;
+                    opacity: 0;
+                    border-width: 10px 10px 0 10px;
+                    border-style: solid;
+                    border-color: #fff transparent transparent transparent;
+                }
+            }
+            .active {
+                background-color: $color-white-0;
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+        .tab-content {
+            padding: 30px 0;
+            .content__header {
+                margin-bottom: 50px;
+                p {
+                    letter-spacing: 2px;
+                    color: #7e7e7e;
+                    font-size: 14px;
+                }
+                h4{
+                    letter-spacing: 2px;
+                    font-size: 30px;
+                }
+            }
+            .content__main{
+                line-height: 30px;
+                font-size: 15px;
+            }
+        }
+    }
+
+    @include responsive("extra-large") {
+        .tab__main {
+            .nav {
+                a {
+                    padding: 35px 55px;
+                }
+            }
+        }
+    }
+
+    @include responsive("large") {
+        .tab__main {
+            .nav {
+                a {
+                    padding: 30px 40px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:767.9px) {
+        .tab__main {
+            .nav {
+                a {
+                    padding: 13px 22px;
+                }
+            }
+        }
+    }
+
+    @include responsive("very-small") {
+        .tab__main {
+            .nav {
+                a {
+                    margin: 0 5px;
+                    padding: 6px 15px;
+                }
+            }
+        }
+    }
+}

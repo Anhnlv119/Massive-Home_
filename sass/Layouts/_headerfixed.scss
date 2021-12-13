@@ -1,0 +1,90 @@
+#headerFixed{
+    position: fixed;
+    padding:0 $pd-3;
+    width: 100%;
+    z-index: 16;
+    background-color: $color-black-2;
+    top: 0;
+    opacity: 0;
+    button{
+        i{
+            color: white;
+        }
+    }
+    .navbar {
+        position: relative;
+        width: 100%;
+        padding: 0;
+        letter-spacing: .5px;
+        text-transform: uppercase;      
+        .navbar-brand {
+            height: 60px;
+            padding: 0;
+            img {
+                height: 60px;
+                width: auto;
+                position: relative;
+                top: -2px;
+                display: inline-block;
+                max-height: 100%;
+                padding: $pd-2 0;
+            }
+        }
+        #homeNavBar {
+           
+            .header__menu {
+                .nav-item {
+                    margin-left: $pd-2;
+                    .nav-link{
+                        @include styleText($color-white-0, $fs-0, $fw-0);
+                        padding: 0 $pd-0;
+                        transition: all 0.5s;
+                        &:hover{
+                            color: $color-gold-0;
+                        }
+                    }
+                }
+                .active {
+                    .nav-link {
+                        color: $color-gold-0;
+                    }
+                }
+            }
+            .header__menu{
+                .mright{
+                    .nav-link{
+                        border-right:2px solid $color-white-0;
+                        padding-right: $pd-0 * 2; 
+                    }               
+                }
+                .shopping{
+                    .nav-link{
+                        padding-left: $pd-0 * 2;
+                    }       
+                }   
+            }
+        }
+    }
+    @include responsive("large"){
+        .navbar{
+            #homeNavBar{
+                .header__menu{
+                    .nav-item{
+                        padding: 3px 12px;
+                    }
+                    .mright{
+                        .nav-link{
+                            border-right: none;
+
+                        }               
+                    }
+                    .shopping{
+                        .nav-link{
+                            padding-left: $pd-0;
+                        }       
+                    }   
+                }
+            }
+        } 
+    }
+}
